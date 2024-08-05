@@ -1,0 +1,26 @@
+resize.py:
+	resimlerin arkasında belirgin siyah geniş bir arkaplan varsa bu eğitimi negatif etkileyebilir. Kırmak için resize.py yi kullanın.
+	Pixel bazlı değil resmin merkezinden eni ve boyuna olan uzaklığına bakarak bir hesap yapar.Sonrasında kırpma işlemi yapar.
+	def crop_and_save_images(input_folder, output_folder, crop_size=(830, 470)):    crop_size  değerine istediğiniz boyutu yazmanız gerekir.
+	
+	Dosya yolunu doğru belirttiğinize emin olun.
+	input_folder = "/home/hafizeogut/Desktop/images"  # Girdi görüntülerinin olduğu klasör
+    	output_folder = "/home/hafizeogut/Desktop/images"  # Çıktı görüntülerinin kaydedileceği klasör
+
+name_file.py:
+	resimleri images dosyasının içerisindeyken terminali açın ve python3 name_dile.py yazın
+	{tarih}_frame_{index:04d}{uzantı}  - 2024_07_31_frame_0001.jpg şeklinde düzenleyin ve etiketleme işlemini sonra gerçekleştirin. 
+	Projenize düzen sağlayacaktır.
+	
+preprocessing.py: 
+	bir klasör içinde preprocessing.py dosyası, images klasörü: resimleri içerir, labels klasörü :etiketleri içerir yerleştiriniz.
+
+	Terminali açıp -ubuntu- python3 preprocessing.py yazarak yolov5 formatı için hazır veri seti oluşturabilirsiniz.
+	kod bloğunun içerisine girip dosya yollarını değiştirerek uygun veri setini oluşturabilirseniz
+ 
+	preprocessing.py içerisinde :
+	write_to_file("tassel_data/train/images", "tassel_data/train/labels", X_train)
+	write_to_file("tassel_data/valid/images", "tassel_data/valid/labels", X_valid)
+	write_to_file("tassel_data/test/images", "tassel_data/test/labels", X_test)
+	
+
